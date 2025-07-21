@@ -1,0 +1,35 @@
+.homeheading {
+  font-size: 1.5rem; 
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 2.5rem;
+  }
+}
+
+.comptransaction {
+    font-size: 1.5rem; 
+
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 1.8rem;
+  }
+}
+
+.comptransactionpage{
+    font-size: 1.5rem; 
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 2rem;
+  }
+}

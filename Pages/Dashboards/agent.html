@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/css/agent.css">
+</head>
+<body>
+    <body class="container-fluid p-0 overflow-x-hidden">
+        <main class="row g-0 ">
+
+            <!-- LEFT PANEL -->
+            <section class="col-12 col-md-2 bg-dark d-flex flex-column flex-shrink-0 min-md-vh-100">
+                <div class="nav flex-column nav-pills py-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link text-light mb-3 text-start fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#profileMenu" aria-expanded="false" aria-controls="profileMenu">
+                    <img id="profilePreview" 
+                        src="/assets/profile picture.jpg" 
+                        alt="Profile" 
+                        class="img-fluid rounded-circle me-2"
+                        style="width: 40px; height: 40px; object-fit: cover;">My Profile
+                    </button>
+
+                    <input type="file" id="profileInput" accept="image/*" class="d-none">
+
+                    <div class="collapse ps-5" id="profileMenu">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                        <a class="nav-link text-light" style="font-size: 0.9rem;" href="/Pages/auth/login.html">Sign Out</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-light" style="font-size: 0.9rem;" id="updatePhotoLink" href="#">Update photo</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link text-danger" data-bs-toggle="modal" data-bs-target="#deleteAccountModal" style="font-size: 0.9rem;">Delete Account</a>
+                        </li>
+                    </ul>
+                    </div>
+
+
+                    <button class="nav-link text-light mb-2 text-start active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                    <i class="bi bi-house-door px-2 fs-4"></i> Home
+                    </button>
+
+                    <a href="#" class="nav-link text-light mb-2 text-start" type="button" aria-selected="false">
+                        <i class="bi bi-list-ul px-2 fs-4"></i> Listings
+                    </a>
+
+
+                    <button class="nav-link text-light mb-2 text-start" id="v-pills-properties-tab" data-bs-toggle="pill" data-bs-target="#v-pills-properties" type="button" role="tab" aria-controls="properties" aria-selected="false">
+                    <i class="bi bi-houses-fill px-2 fs-4"></i> My Properties
+                    </button>
+
+                    <button class="nav-link text-light mb-2 text-start" id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="orders" aria-selected="false">
+                    <i class="bi bi-card-checklist px-2 fs-4"></i> My Orders
+                    </button>
+                    
+                    <a href="/index.html" class="nav-link text-light mb-2 text-start" type="button" aria-selected="false">
+                    <i class="bi bi-eye px-2 fs-4"></i> View site
+                    </a>
+                </div>
+                </section>
+
+                <!-- RIGHT PANEL -->
+                <section class="col-9 px-4 py-3 bg-light">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <h1 class="homeheading ms-3 ms-md-auto">Welcome, Hart Anita</h1>
+
+                            <div class="row d-flex align-items-center ms-3 ms-md-auto mt-5 gap-2">
+                                <div class="col-12 col-md-4 d-flex gap-3 justify-content-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                                    <i class="bi bi-house-check text-primary fs-1"></i>
+                                    <div class="col-6">
+                                        <h3 class="mb-0">12</h3>
+                                        <p class="mt-0" >Properties</p>
+                                    </div>  
+                                </div>
+                                <div class="col-12 col-md-3 d-flex gap-3 justify-content-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                                    <i class="bi bi-wallet-fill text-primary fs-1"></i>
+                                    <div class="col-6">
+                                        <h3 class="mb-0">3</h3>
+                                        <p class="mt-0">Orders</p>
+                                    </div>  
+                                </div>  
+                                <div class="col-12 col-md-4 d-flex gap-3 justify-content-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                                    <i class="bi bi-wallet-fill text-primary fs-1"></i>
+                                    <div class="col-6">
+                                        <h4 class="mb-0">N657,000</h4>
+                                        <p class="mt-0">Earned</p>
+                                    </div>  
+                                </div>  
+                            </div>
+                            <div>
+                                <div class="mb-3">
+                                    <h4 class="comptransaction">Recently Completed Transactions</h4>
+                                </div>
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                        <th>Property</th>
+                                        <th>Status</th>
+                                        <th>Type</th>
+                                        <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="row">
+                                                <img src="/assets/banner1.jpg" alt="house" class="img-fluid col-6" style="width: 6.25rem; height: 3.75rem;">
+                                                <div class="col-6">
+                                                    <h6 class="mb-0">No.13 Rumuola Road</h6>
+                                                    <p class="mt-0" style="font-size: 0.8rem;">Port Hartcourt, Rivers State.</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-success px-3 py-2">Sold</span></td>
+                                            <td>Residential</td>
+                                            <td>₦45,000,000/year</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="row">
+                                                <img src="/assets/banner1.jpg" alt="house" class="img-fluid col-6" style="width: 6.25rem; height: 3.75rem;">
+                                                <div class="col-6">
+                                                <h6 class="mb-0">No.13 Rumuola Road</h6>
+                                                <p class="mt-0" style="font-size: 0.8rem;">Port Hartcourt, Rivers State.</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-warning text-dark px-3 py-2">Rented</span></td>
+                                            <td>Commercial</td>
+                                            <td>₦3,000,000/year</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="row">
+                                                <img src="/assets/banner1.jpg" alt="house" class="img-fluid col-6" style="width: 6.25rem; height: 3.75rem;">
+                                                <div class="col-6">
+                                                <h6 class="mb-0">No.13 Rumuola Road</h6>
+                                                <p class="mt-0" style="font-size: 0.8rem;">Port Hartcourt, Rivers State.</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-warning text-dark px-3 py-2">Rented</span></td>
+                                            <td>Commercial</td>
+                                            <td>₦3,000,000/year</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-------------PROPERTIES TAB CONTENT---------------->
+                        <div class="tab-pane fade" id="v-pills-properties" role="tabpanel" aria-labelledby="v-pills-properties-tab">
+                            <div>
+                                <div class="mb-5">
+                                    <h2 class="comptransactionpage">Completed Transactions</h2>
+                                </div>
+
+                                <div class="row row-cols-1 row-cols-md-3 g-4">
+                                    <div class="col-12 ms-5 ms-md-0 col-md-3">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-warning text-dark px-3 py-2">Rented</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Residential</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-success text-dark px-3 py-2">Sold</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Commercial</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-warning text-dark px-3 py-2">Rented</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Commercial</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-success text-dark px-3 py-2">Sold</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Residential</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-success text-dark px-3 py-2">Sold</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Residential</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-warning text-dark px-3 py-2">Rented</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Commercial</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-warning text-dark px-3 py-2">Rented</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Residential</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-warning text-dark px-3 py-2">Rented</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Commercial</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-warning text-dark px-3 py-2">Rented</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Residential</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-warning text-dark px-3 py-2">Rented</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Residential</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-warning text-dark px-3 py-2">Rented</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Commercial</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-warning text-dark px-3 py-2">Rented</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Residential</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-------------ORDERS TAB CONTENT---------------->
+                        <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
+                            <div>
+                                <div class="mb-5">
+                                    <h3>My Orders</h3>
+                                </div>
+
+                                <div class="row row-cols-1 row-cols-md-3 g-4">
+                                    <div class="col-12 col-md-4 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                            <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                            <p class="card-text text-danger">₦45,000,000</p>
+                                            <span class="badge bg-warning text-dark px-3 py-2">Rent</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">Commercial</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                            <div class="card-body">
+                                                <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                                <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                                <p class="card-text text-danger">₦45,000,000</p>
+                                                <span class="badge bg-success text-dark px-3 py-2">Buy</span>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Residential</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 ms-5 ms-md-0">
+                                        <div class="card h-100">
+                                            <img src="/assets/banner1.jpg" class="card-img-top" alt="house">
+                                            <div class="card-body">
+                                                <h6 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> No. 13 Rumuola Road, Portharcout, Rivers State</h6>
+                                                <p style="font-size: 0.8rem;">This is a 5bedroom bungalow with a BQ behind. Has a field and swimming pool behind</p>
+                                                <p class="card-text text-danger">₦45,000,000</p>
+                                                <span class="badge bg-warning text-dark px-3 py-2">Rent</span>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Industrial</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </section>
+        </main>
+    
+
+        <div class="modal" id="deleteAccountModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger">Delete Account</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to permanently delete your account? This action cannot be undone.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Yes, Delete</button>
+                                <button type="button" class="btn btn-primary">Cancel</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/agent.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+
+</body>
+</html>
