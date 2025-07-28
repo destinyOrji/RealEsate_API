@@ -1,0 +1,21 @@
+.image-text {
+      font-size: 1.6rem;
+      font-weight: bold;
+      background: url('https://tse2.mm.bing.net/th/id/OIP.964OCKW0uyjB9d4UhXDANgHaEh?w=2000&h=1222&rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center;
+      background-size: cover;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text; 
+      color: transparent;
+    }
+
+.image-text-listing{
+  font-size: 1.3rem;
+      font-weight: bold;
+      background: url('https://tse2.mm.bing.net/th/id/OIP.964OCKW0uyjB9d4UhXDANgHaEh?w=2000&h=1222&rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center;
+      background-size: cover;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text; 
+      color: transparent;
+}

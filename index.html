@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+   <link rel="stylesheet" href="/css/index.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -25,21 +26,16 @@
 
     <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
-        <li class="nav-item"><a class="nav-link active text-light fw-semibold" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-light fw-semibold" href="#about">About</a></li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light fw-semibold" href="#" id="propertiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Properties
-            </a>
-            <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="propertiesDropdown">
-                <li><a class="dropdown-item text-dark dropdown-hover fw-semibold" href="#buy">Buy</a></li>
-                <li><a class="dropdown-item text-dark dropdown-hover fw-semibold" href="#rent">Rent</a></li>
-            </ul>
+        <li class="nav-item"><a class="nav-link active text-light fw-semibold " href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-light fw-semibold" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link text-light fw-semibold" href="/Pages/properties.html">Properties</a></li>
+        <li class="nav-item">
+            <a class="nav-link text-light fw-semibold border border-light rounded-4 px-4 text-center become-agent-hover"
+                href="/Pages/becomeanagent.html">Become an Agent</a>
         </li>
-
         <li class="nav-item"><a class="nav-link text-light fw-semibold" href="#contact">Contact</a></li>
       </ul>
-      <a href="./Pages/auth/userlogin.html" class="btn btn-outline-light rounded-4 px-4">Login</a>
+      <a href="/Pages/auth/userlogin.html" class="btn btn-outline-warning bg-warning rounded-4 px-4 fw-semibold" style="color: #1A1F71;">Login</a>
     </div>
 
   </div>
@@ -68,7 +64,7 @@
                 <h2 class="fs-5 d-none d-lg-block fs-md-3 ">Expert Guidance every step of the way</h2>
                 <p class="fs-5 bottom-50 fs-md-1 mb-1 ">Buy Your Dream Home with</p>
                 <h1 class="h1 bottom-50 fs-md-5 h-md-1 fw-bold ">CAM-GD Real Estate</h1>
-                <a href="#" class="btn btn-warning mt-3">Book An Appointment</a>
+                <a href="#contact" class="btn btn-warning mt-3 custom-hover fw-semibold" style="color: #1A1F71;">Book An Appointment</a>
             </div>
         </div>
     </section>
@@ -127,37 +123,7 @@
     </section>
 
 
-    <!-- ===================== LATEST PROPERTIES FOR RENT ===================== -->
-    <section id="buyrent" class="py-5">
-        <div class="container">
-            <h2 class="text-center text-primary mb-5">LATEST PROPERTIES FOR RENT</h2>
-
-            <div class="row g-5 align-items-center mb-2 m-2 p-5" style="background-color: #1A1F71;">
-                <div class="col-md-6 order-md-2">
-                    <img src="./Assets/rental 1.jpg" class="img-fluid rounded" alt="Peter's Avenue">
-                </div>
-                <div class="col-md-6 order-md-1 text-light">
-                    <h4>PETER'S AVENUE</h4>
-                    <p class="small text-muted mb-1">4 Bedrooms</p>
-                    <p>Enjoy open-plan living areas, en-suite bedrooms, modern kitchen fittings, private balconies, and 24/7 security. Minutes from major landmarks, schools, and upscale shopping.</p>
-                    <h5 class="text-success">₦50,000 per week</h5>
-                </div>
-            </div>
-
-            <div class="row g-5 align-items-center m-1 p-5" style="background-color: #1A1F71;">
-                <div class="col-md-6">
-                    <img src="./Assets/rental 2.jpg" class="img-fluid rounded" alt="Morgan's Close">
-                </div>
-                <div class="col-md-6 text-light">
-                    <h4>MORGAN'S CLOSE</h4>
-                    <p class="small text-muted mb-1">3 Bedrooms</p>
-                    <p>Whether you're working from home, hosting dinner, or relaxing after a long day, this home offers the perfect balance of comfort and style.</p>
-                    <h5 class="text-success">₦45,000 per week</h5>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
 
     <!-- ===================== BENEFITS ===================== -->
     <section id="benefits" class="py-5 bg-light">
