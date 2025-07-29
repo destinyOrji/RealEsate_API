@@ -72,7 +72,7 @@
                     <i class="bi bi-grid px-2 fs-6"></i> <span class="fs-6">Dashboard</span>
                     </button>
 
-                    <a href="#" class="nav-link text-light mb-3 text-start" type="button" aria-selected="false">
+                    <a href="/Pages/properties.html" class="nav-link text-light mb-3 text-start" type="button" aria-selected="false">
                         <i class="bi bi-list-ul px-2 fs-6"></i> <span class="fs-6">Listings</span>
                     </a>
 
@@ -81,11 +81,7 @@
                     <i class="bi bi-houses-fill px-2 fs-6"></i> <span class="fs-6 ">Scheduled Tours</span>
                     </button>
 
-                    <button class="nav-link text-light mb-3 text-start" id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="orders" aria-selected="false">
-                    <i class="bi bi-check2-square px-2 fs-6"></i> <span class="fs-6">Recently viewed</span>
-                    </button>
-
-                    <button class="nav-link text-light mb-3 text-start" id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="orders" aria-selected="false">
+                    <button class="nav-link text-light mb-3 text-start" id="v-pills-saved-tab" data-bs-toggle="pill" data-bs-target="#v-pills-saved" type="button" role="tab" aria-controls="saved" aria-selected="false">
                     <i class="bi bi-bookmark-star-fill px-2 fs-6"></i> <span class="fs-6">Saved</span>
                     </button>
 
@@ -142,44 +138,112 @@
                             <h2 class="image-text-listing">New Listing</h2>
 
                             <!-- Listing Cards -->
-                            <div class="col-4 mb-3">
-                                <div class="card text-bg-dark position-relative">
-                                    <img src="/assets/clientDasboardListing1.jpg" class="card-img" alt="house">
-                                    <div class="position-absolute bottom-0 start-0 bg-light rounded-3 p-3 m-2 text-dark" style="max-width: 60%; max-height: 40%;">
-                                        <h6 class="card-title m-0 p-0">Michael Close</h6>
-                                        <p class="card-text m-0 p-0" style="font-size: 0.8rem;">Modern 3-bedroom flat</p>
-                                        <p class="card-text m-0 p-0 fw-bold" style="font-size: 1rem">#1,800,000 pa</p>
-                                        <a href="#" class="p-1 bg-warning rounded text-decoration-none text-dark fw-semibold" style="font-size: 0.8rem">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="container">
+                                <div class="row g-4">
+                                    <!---CARD 1-->
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="card h-100" data-id="house1">
+                                            <div class="position-relative">
+                                                <img src="/assets/house1.jpg" class="card-img-top" alt="house">
+                                                <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
+                                                <button
+                                                class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#newListingModal"
+                                                data-title="3 bedroom flat"
+                                                data-location="Lekki, Lagos Island"
+                                                data-price="30,000,000 Naira"
+                                                data-type="3 Bedroom Flat"
+                                                data-img="/assets/house1.jpg"
+                                                data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
+                                                Preview
+                                                </button>
+                                            </div>
+                                            <div class="card-body d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
+                                                <p class="card-text p-0 m-0">
+                                                <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                </p>
+                                            </div>
+                                            <i class="bi bi-bookmark fs-5 save-icon" data-id="house1" style="cursor: pointer;"></i>
+                                            </div>
 
-                            
-                            <div class="col-4 mb-3">
-                                <div class="card text-bg-dark position-relative">
-                                    <img src="/assets/clientDasboardListing1.jpg" class="card-img" alt="house">
-                                    <div class="position-absolute bottom-0 start-0 bg-light rounded-3 p-3 m-2 text-dark" style="max-width: 60%; max-height: 40%;">
-                                        <h6 class="card-title m-0 p-0">Michael Close</h6>
-                                        <p class="card-text m-0 p-0" style="font-size: 0.8rem;">Modern 3-bedroom flat</p>
-                                        <p class="card-text m-0 p-0 fw-bold" style="font-size: 1rem">#1,800,000 pa</p>
-                                        <a href="#" class="p-1 bg-warning rounded text-decoration-none text-dark fw-semibold" style="font-size: 0.8rem">View Details</a>
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Commercial</small>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
 
-                            <div class="col-4 mb-3">
-                                <div class="card text-bg-dark position-relative">
-                                    <img src="/assets/clientDasboardListing1.jpg" class="card-img" alt="house">
-                                    <div class="position-absolute bottom-0 start-0 bg-light rounded-3 p-3 m-2 text-dark" style="max-width: 60%; max-height: 40%;">
-                                        <h6 class="card-title m-0 p-0">Michael Close</h6>
-                                        <p class="card-text m-0 p-0" style="font-size: 0.8rem;">Modern 3-bedroom flat</p>
-                                        <p class="card-text m-0 p-0 fw-bold" style="font-size: 1rem">#1,800,000 pa</p>
-                                        <a href="#" class="p-1 bg-warning rounded text-decoration-none text-dark fw-semibold" style="font-size: 0.8rem">View Details</a>
+                                    <!---CARD 2-->
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="card h-100" data-id="house2">
+                                            <div class="position-relative">
+                                                <img src="/assets/house1.jpg" class="card-img-top" alt="house">
+                                                <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
+                                                <button
+                                                class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#newListingModal"
+                                                data-title="3 bedroom flat"
+                                                data-location="Lekki, Lagos Island"
+                                                data-price="30,000,000 Naira"
+                                                data-type="3 Bedroom Flat"
+                                                data-img="/assets/house1.jpg"
+                                                data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
+                                                Preview
+                                                </button>
+                                            </div>
+
+                                            <div class="card-body d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
+                                                <p class="card-text p-0 m-0">
+                                                <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                </p>
+                                            </div>
+                                            <i class="bi bi-bookmark fs-5 save-icon" style="cursor: pointer;" data-id="house2"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!---CARD 3-->
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="card h-100" data-id="house3">
+                                            <div class="position-relative">
+                                                <img src="/assets/house1.jpg" class="card-img-top" alt="house">
+                                                <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
+                                                <button
+                                                class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#newListingModal"
+                                                data-title="3 bedroom flat"
+                                                data-location="Lekki, Lagos Island"
+                                                data-price="30,000,000 Naira"
+                                                data-type="3 Bedroom Flat"
+                                                data-img="/assets/house1.jpg"
+                                                data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
+                                                Preview
+                                                </button>
+                                            </div>
+
+                                            <div class="card-body d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
+                                                <p class="card-text p-0 m-0">
+                                                <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                </p>
+                                            </div>
+                                            <i class="bi bi-bookmark fs-5 save-icon" data-id="house3" style="cursor: pointer;"></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+             
 
                     <!-- NOTIFICATIONS TAB -->
                     <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel" aria-labelledby="v-pills-notifications-tab">
@@ -217,36 +281,122 @@
                     <div class="tab-pane fade" id="v-pills-scheduledtour" role="tabpanel" aria-labelledby="v-pills-scheduledtour-tab">
                         <h4 class="mb-3">My Scheduled Tour<i class="bi bi-bell-fill px-2 h5"></i></h4>
 
-                        <div class="row d-flex gap-2 mx-2">
-                            <div class="col-12 bg-light p-4 d-flex justify-content-between">
-                                <span>🏡 New property: 3-bed in Lekki</span>
-                                <small>11 mins ago</small>
-                            </div>
-                            <div class="col-12 bg-light p-4 d-flex justify-content-between">
-                                <span>📅 Tour confirmed for July 25</span>
-                                <small>50 mins ago</small>
-                            </div>
-                            <div class="col-12 bg-light p-4 d-flex justify-content-between">
-                                <span>💰 Rent due in 6 days</span>
-                                <small>21 hours ago</small>
-                            </div>
-                            <div class="col-12 bg-light p-4 d-flex justify-content-between">
-                                <span>📅 Tour confirmed for July 25</span>
-                                <small>4 days ago</small>
-                            </div>
-                            <div class="col-12 bg-light p-4 d-flex justify-content-between">
-                                <span>💰 Rent due in 9 days</span>
-                                <small>6 days ago</small>
-                            </div>
-                            <div class="col-12 bg-light p-4 d-flex justify-content-between">
-                                <span>💰 Rent due in 3 days</span>
-                                <small>6 days ago</small>
-                            </div>
+                        <!-- Start Row -->
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+                                <!---CARD-->
+                                    <div class="col">
+                                        <div class="card h-100">
+                                        <div class="position-relative">
+                                            <img src="/assets/house1.jpg" class="card-img-top" alt="house">
+                                            <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
+                                            <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#propertytourModal"
+                                            data-title="3 bedroom flat"
+                                            data-location="Lekki, Lagos Island"
+                                            data-price="30,000,000 Naira"
+                                            data-type="3 Bedroom Flat"
+                                            data-img="/assets/house1.jpg"
+                                            data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
+                                            Preview
+                                            </button>
+                                        </div>
+
+                                        <div class="card-body d-flex justify-content-between align-items-start">
+                                            <div>
+                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
+                                            <p class="card-text p-0 m-0">
+                                                <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                            </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                        <small class="text-body-secondary">Commercial</small>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <!---CARD-->
+                                    <div class="col">
+                                        <div class="card h-100">
+                                        <div class="position-relative">
+                                            <img src="/assets/house1.jpg" class="card-img-top" alt="house">
+                                            <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
+                                            <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#propertytourModal"
+                                            data-title="3 bedroom flat"
+                                            data-location="Lekki, Lagos Island"
+                                            data-price="30,000,000 Naira"
+                                            data-type="3 Bedroom Flat"
+                                            data-img="/assets/house1.jpg"
+                                            data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
+                                            Preview
+                                            </button>
+                                        </div>
+
+                                        <div class="card-body d-flex justify-content-between align-items-start">
+                                            <div>
+                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
+                                            <p class="card-text p-0 m-0">
+                                                <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                            </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                        <small class="text-body-secondary">Commercial</small>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <!---CARD-->
+                                    <div class="col">
+                                        <div class="card h-100">
+                                        <div class="position-relative ">
+                                            <img src="/assets/house1.jpg" class="card-img-top" alt="house">
+                                            <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
+                                            <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#propertytourModal"
+                                            data-title="3 bedroom flat"
+                                            data-location="Lekki, Lagos Island"
+                                            data-price="30,000,000 Naira"
+                                            data-type="3 Bedroom Flat"
+                                            data-img="/assets/house1.jpg"
+                                            data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
+                                            Preview
+                                            </button>
+                                        </div>
+
+                                        <div class="card-body d-flex justify-content-between align-items-start">
+                                            <div>
+                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
+                                            <p class="card-text p-0 m-0">
+                                                <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                            </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                        <small class="text-body-secondary">Commercial</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+
+                    <!-- SAVED TAB -->
+                    <div class="tab-pane fade" id="v-pills-saved" role="tabpanel" aria-labelledby="v-pills-saved-tab">
+                        <h4 class="mb-3">My Saved Items</h4>
+
+                        <div id="savedContainer" class="row my-4">
+                            
                         </div>
                     </div>
 
-
-                </div>
             </section>
  
         </main>
@@ -269,7 +419,117 @@
                             </div>
                         </div>
                     </div>
+
+
+                                      <!-- Property Preview Modal -->
+            <div class="modal fade" id="newListingModal" tabindex="-1" aria-labelledby="newListingModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="newListingModalLabel">Title here</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <img id="modalImage" src="" class="img-fluid mb-3" alt="Property">
+                        <p><strong>Location:</strong> <span id="modalLocation"></span></p>
+                        <p><strong>Type:</strong> <span id="modalType"></span></p>
+                        <p><strong>Features:</strong> <span id="modalFeatures"></span></p>
+                        <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-primary" data-bs-dismiss="modal" onclick="openInspectionForm()">Book a Free Inspection</button>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+
+                            <!-- Inspection Form Modal -->
+            <div class="modal fade" id="newListingFormModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Schedule a Free Inspection</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form id="newListingForm" class="needs-validation" novalidate>
+                            <input type="text" name="name" class="form-control mb-2" placeholder="Your Name" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
+
+                            <input type="email" name="email" class="form-control mb-2" placeholder="Email Address" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+
+                            <input type="date" name="date" class="form-control mb-2" required>
+                            <div class="invalid-feedback">Please select a date.</div>
+
+                            <input type="time" name="time" class="form-control mb-2" required>
+                            <div class="invalid-feedback">Please select a time.</div>
+                        </form>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button 
+                            class="btn btn-primary" 
+                            type="submit" 
+                            form="newListingForm" >
+                            Submit
+                        </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
         
+            <!-- Property Preview Modal Scheduled tour-->
+            <div class="modal fade" id="propertytourModal" tabindex="-1" aria-labelledby="propertytourModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="propertytourModalLabel">Title here</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img id="modaltourImage" src="" class="img-fluid mb-3" alt="Property">
+                            <p><strong>Location:</strong> <span id="modaltourLocation"></span></p>
+                            <p><strong>Type:</strong> <span id="modaltourType"></span></p>
+                            <p><strong>Features:</strong> <span id="modaltourFeatures"></span></p>
+                            <p><strong>Price:</strong> <span id="modaltourPrice"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+  const propertytourModal = document.getElementById('propertytourModal');
+  
+  propertytourModal.addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+
+    // Extract data from the button
+    const title = button.getAttribute('data-title');
+    const location = button.getAttribute('data-location');
+    const type = button.getAttribute('data-type');
+    const features = button.getAttribute('data-features');
+    const price = button.getAttribute('data-price');
+    const img = button.getAttribute('data-img');
+
+    // Update modal content
+    document.getElementById('propertytourModalLabel').textContent = title;
+    document.getElementById('modaltourLocation').textContent = location;
+    document.getElementById('modaltourType').textContent = type;
+    document.getElementById('modaltourFeatures').textContent = features;
+    document.getElementById('modaltourPrice').textContent = price;
+    document.getElementById('modaltourImage').src = img;
+  });
+</script>
+
     <script src="/js/jquery.min.js"></script>
     <script src="/js/client.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
