@@ -59,3 +59,36 @@
     }, { once: true });
   }
 
+// FORM TO SHOW DETAILS Agent side
+    document.getElementById("inspectionFormModal").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // Get form values
+        const date = document.getElementById("inputDate").value;
+        const time = document.getElementById("inputTime").value;
+
+        // Save to localStorage
+        localStorage.setItem("viewDate", date);
+        localStorage.setItem("viewTime", time);
+
+        // Redirect to the property page
+        window.location.href = "property-preview.html"; // your modal page
+    });
+
+    // FORM TO SHOW DETAILS Client Side
+    document.getElementById("inspectionFormModal").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // Get form values
+        const date = document.getElementById("inputDate").value;
+        const time = document.getElementById("inputTime").value;
+
+        // Save to localStorage
+        localStorage.setItem("viewDate", date);
+        localStorage.setItem("viewTime", time);
+
+        // Redirect to the property page
+        window.location.href = "property-preview.html"; // your modal page
+    });
+
+   

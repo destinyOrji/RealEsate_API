@@ -24,3 +24,24 @@
       });
     }
   });
+
+   // SHOW ON SCHEDULE TOUR MODAL
+    window.addEventListener("DOMContentLoaded", function () {
+        const date = localStorage.getItem("viewDate");
+        const time = localStorage.getItem("viewTime");
+
+        if (name && date && time) {
+            document.getElementById("modalViewDate").textContent = date;
+            document.getElementById("modalViewTime").textContent = time;
+
+            // Optionally clear the storage after use:
+            // localStorage.removeItem("buyerName");
+            // localStorage.removeItem("viewDate");
+            // localStorage.removeItem("viewTime");
+
+            // Open the modal automatically
+            const modal = new bootstrap.Modal(document.getElementById('propertyModal'));
+            modal.show();
+        }
+    });
+

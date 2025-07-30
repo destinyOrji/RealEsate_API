@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f7f7;
+    }
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #002147;
+      position: fixed;
+      color: white;
+      padding-top: 1rem;
+    }
+    .sidebar .nav-link {
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .content {
+      margin-left: 250px;
+      padding: 2rem;
+    }
+    .card-stat {
+      border-bottom: 5px solid #ccc;
+    }
+
+   
+
+   
+  </style>
+</head>
+<body>
+  <aside class="sidebar d-flex flex-column align-items-start p-3">
+    <h5 class="text-white mb-4 fs-6 fw-semibold">CAM-<span class="text-warning">GD</span> HOMES </h5> 
+    <a class="nav-link active" href="./admin-dashboard.html"><i class="bi bi-house"></i> Dashboard</a>
+    <a class="nav-link" href="/Pages/admin-properties.html"><i class="bi bi-building"></i> Properties</a>
+    <a class="nav-link" href="#"><i class="bi bi-people"></i> Users</a>
+    <a class="nav-link" href="#"><i class="bi bi-chat-left-text"></i> Messages</a>
+    <a class="nav-link" href="#"><i class="bi bi-cash-coin"></i> Payments</a>
+    <a class="nav-link" href="#"><i class="bi bi-gear"></i> Settings</a>
+    <a class="nav-link mt-auto" href="#"><i class="bi bi-box-arrow-right"></i> Log Out</a>
+  </aside>
+
+  <div class="content">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h4>Good morning, Mr. Moses.</h4>
+      <div class="d-flex align-items-center">
+        <input class="form-control me-2" type="search" placeholder="Search for listing, property etc." style="width: 300px;">
+        <i class="bi bi-bell fs-4 me-3"></i>
+        <div class="d-flex align-items-center">
+          <div class="me-2">Moses Gideonfia <span class="text-muted">Admin</span></div>
+         <img src="https://i.pravatar.cc/32" alt="profile" class="profile-img me-2"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Stats -->
+    <div class="row g-3 mb-4">
+      <div class="col-md-4">
+        <div class="card card-stat shadow-sm">
+          <div class="card-body">
+            <h6>Total Properties</h6>
+            <h4>1245 <small class="text-success">+15%</small></h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-stat shadow-sm">
+          <div class="card-body">
+            <h6>Properties for Rent</h6>
+            <h4>645 <small class="text-warning">+45%</small></h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-stat shadow-sm">
+          <div class="card-body">
+            <h6>Properties for Sale</h6>
+            <h4>455 <small class="text-warning">+11%</small></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <!-- Side-by-side container -->
+<div class="container">
+  <div class="row g-3">
+    <!-- Visitors Chart -->
+    <div class="col-md-7">
+      <div class="card h-100">
+        <div class="card-body">
+          <h6>Total Visitors <small class="text-muted">(July 2025)</small></h6>
+          <canvas id="visitorChart" width="800" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Report Problems -->
+    <div class="col-md-5">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h6>Report problem <span class="badge bg-warning text-dark">6</span></h6>
+          </div>
+
+          <ul class="list-group mt-3 report-list">
+
+  <!-- First visible item -->
+  <li class="list-group-item">
+    <div class="d-flex align-items-start">
+      <i class="bi bi-exclamation-circle-fill text-warning fs-4 me-3 mt-1"></i>
+      <div class="flex-grow-1">
+        <div class="d-flex justify-content-between">
+          <strong>ID: 203</strong>
+          <small class="text-muted">Anita James</small>
+        </div>
+        <p class="mb-1 text-muted">Trouble with Wi-Fi</p>
+      </div>
+      <img src="https://i.pravatar.cc/32" alt="profile" class="rounded-circle ms-3" />
+    </div>
+  </li>
+
+  <!-- Second item -->
+  <li class="list-group-item">
+    <div class="d-flex align-items-start">
+      <i class="bi bi-exclamation-circle-fill text-warning fs-4 me-3 mt-1"></i>
+      <div class="flex-grow-1">
+        <div class="d-flex justify-content-between">
+          <strong>ID: 540</strong>
+          <small class="text-muted">Jasper George</small>
+        </div>
+        <p class="mb-1 text-muted">Unpleasant Odor</p>
+      </div>
+      <img src="https://i.pravatar.cc/32" alt="profile" class="rounded-circle ms-3" />
+    </div>
+  </li>
+
+  <!-- Hidden item initially -->
+  <div id="more-reports" style="display: none;">
+    <li class="list-group-item">
+      <div class="d-flex align-items-start">
+        <i class="bi bi-exclamation-circle-fill text-warning fs-4 me-3 mt-1"></i>
+        <div class="flex-grow-1">
+          <div class="d-flex justify-content-between">
+            <strong>ID: 876</strong>
+            <small class="text-muted">Stanley Rufus</small>
+          </div>
+          <p class="mb-1 text-muted">Sink doesn't work properly</p>
+        </div>
+        <img src="https://via.placeholder.com/32" alt="Resident" class="rounded-circle ms-3" />
+      </div>
+    </li>
+  </div>
+</ul>
+
+          <!-- Show More button -->
+          <button class="btn btn-link p-0 mt-2" id="toggleReports">Show More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-4">
+  <div class="card">
+    <h5 class="mt-3 ps-2">Scheduled Inspection</h5>
+    <div class="table-responsive">
+      <table class="table align-middle mb-0">
+        <thead class="table-light">
+          <tr>
+            <th scope="col" style="width: 40px;"></th>
+            <th scope="col">Name</th>
+            <th scope="col">Roles</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col" class="text-end"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Row 1 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div>
+                  <p>Anita Joe</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div>
+                <p>Agent</p>
+              </div>
+            </td>
+            <td>12-04-2025</td>
+            <td>12:00pm</td>
+            <td><div class="dropdown">
+    <button class="btn btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+      <img style="width: 20px; height: 20px;" src="/assets/ant-design_more-outlined.png" alt=""> 
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li><a class="dropdown-item " href="#">Delete</a></li>
+    </ul>
+  </div></td>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div>
+                  <p>Anita Joe</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div>
+                <p>Buyer</p>
+              </div>
+            </td>
+            <td>12-04-2025</td>
+            <td>12:00pm</td>
+            <td><div class="dropdown">
+    <button class="btn btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+      <img style="width: 20px; height: 20px;" src="/assets/ant-design_more-outlined.png" alt=""> 
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li><a class="dropdown-item " href="#">Delete</a></li>
+    </ul>
+  </div></td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div>
+                  <p>Anita Joe</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div>
+                <p>Agent</p>
+              </div>
+            </td>
+            <td>12-04-2025</td>
+            <td>12:00pm</td>
+            <td><div class="dropdown">
+    <button class="btn btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+      <img style="width: 20px; height: 20px;" src="/assets/ant-design_more-outlined.png" alt=""> 
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li><a class="dropdown-item " href="#">Delete</a></li>
+    </ul>
+  </div></td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div>
+                  <p>Anita Joe</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div>
+                <p>Buyer</p>
+              </div>
+            </td>
+            <td>12-04-2025</td>
+            <td>12:00pm</td>
+            <td><div class="dropdown">
+    <button class="btn btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+      <img style="width: 20px; height: 20px;" src="/assets/ant-design_more-outlined.png" alt=""> 
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li><a class="dropdown-item " href="#">Delete</a></li>
+    </ul>
+  </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+ </div>
+
+
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('visitorChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+          label: 'Visitors',
+          data: [15000, 30000, 70000, 75000, 72000, 28000, 32000],
+          backgroundColor: '#4e73df'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
+
+    //toogle expand
+     const toggleBtn = document.getElementById("toggleReports");
+  const moreReports = document.getElementById("more-reports");
+
+  toggleBtn.addEventListener("click", () => {
+    const isHidden = moreReports.style.display === "none";
+    moreReports.style.display = isHidden ? "block" : "none";
+    toggleBtn.textContent = isHidden ? "Show Less" : "Show More";
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".sidebar .nav-link");
+  const currentPage = window.location.pathname;
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage || currentPage.includes(link.getAttribute("href"))) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});
+  </script>
+</body>
+</html>
+
+</body>
+</html>

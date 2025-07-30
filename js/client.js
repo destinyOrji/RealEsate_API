@@ -79,95 +79,48 @@
     }, { once: true });
   }
 
-//SAVE PAGE
+// SHOW ON SCHEDULE TOUR MODAL
+    window.addEventListener("DOMContentLoaded", function () {
+        const date = localStorage.getItem("clientviewDate");
+        const time = localStorage.getItem("clientviewTime");
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Load saved cards on page load
-    const saved = JSON.parse(localStorage.getItem('savedProperties')) || [];
-    const savedContainer = document.getElementById('savedContainer');
-    saved.forEach(item => {
-        if (savedContainer) savedContainer.innerHTML += generateCardHTML(item);
+        if (name && date && time) {
+            document.getElementById("modalclientViewDate").textContent = date;
+            document.getElementById("modalclientViewTime").textContent = time;
+
+            // Optionally clear the storage after use:
+            // localStorage.removeItem("buyerName");
+            // localStorage.removeItem("viewDate");
+            // localStorage.removeItem("viewTime");
+
+            // Open the modal automatically
+            const modal = new bootstrap.Modal(document.getElementById('propertyModal'));
+            modal.show();
+        }
     });
 
-    // Setup click for all bookmark icons
-    document.querySelectorAll('.save-icon').forEach(icon => {
-        icon.addEventListener('click', function () {
-            const id = this.getAttribute('data-id');
-            const card = this.closest('.card');
 
-            let savedList = JSON.parse(localStorage.getItem('savedProperties')) || [];
-            const alreadySaved = savedList.find(item => item.id === id);
 
-            if (!alreadySaved) {
-                // Save the card
-                const cardData = {
-                    id: id,
-                    img: card.querySelector('img').src,
-                    title: card.querySelector('.card-title').innerText,
-                    location: card.querySelector('.card-text').innerText,
-                    price: card.querySelector('[data-price]')?.getAttribute('data-price') || "#30M",
-                    type: card.querySelector('[data-type]')?.getAttribute('data-type') || "3 Bedroom Flat",
-                    features: card.querySelector('[data-features]')?.getAttribute('data-features') || "",
-                };
+  (() => {
+    'use strict';
 
-                savedList.push(cardData);
-                localStorage.setItem('savedProperties', JSON.stringify(savedList));
+    const form = document.getElementById('newListingModal');
 
-                this.classList.remove('bi-bookmark');
-                this.classList.add('bi-bookmark-fill', 'text-primary');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Always prevent default first
 
-                if (savedContainer) savedContainer.innerHTML += generateCardHTML(cardData);
-            } else {
-                // Remove from saved
-                savedList = savedList.filter(item => item.id !== id);
-                localStorage.setItem('savedProperties', JSON.stringify(savedList));
+      if (!form.checkValidity()) {
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        return; // Stop here if invalid
+      }
 
-                this.classList.remove('bi-bookmark-fill', 'text-primary');
-                this.classList.add('bi-bookmark');
+      form.classList.add('was-validated');
 
-                // Remove from saved page
-                const toRemove = savedContainer.querySelector(`[data-id="${id}"]`);
-                if (toRemove) toRemove.remove();
-            }
-        });
-    });
-});
+      // ✅ Open the next modal here
+      const nextModal = new bootstrap.Modal(document.getElementById('confirmsubmitModal'));
+      nextModal.show();
+    }, false);
+  })();
 
-// Generates the full card HTML for saved page
-function generateCardHTML(data) {
-    return `
-    <div class="col-12 col-sm-6 col-lg-4" data-id="${data.id}">
-        <div class="card h-100">
-            <div class="position-relative">
-                <img src="${data.img}" class="card-img-top" alt="house">
-                <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">${data.price}</span>
-                <button
-                    class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
-                    data-bs-toggle="modal"
-                    data-bs-target="#propertyModal"
-                    data-title="${data.title}"
-                    data-location="${data.location}"
-                    data-price="${data.price}"
-                    data-type="${data.type}"
-                    data-img="${data.img}"
-                    data-features="${data.features}">
-                    Preview
-                </button>
-            </div>
-            <div class="card-body d-flex justify-content-between align-items-start">
-                <div>
-                    <h5 class="card-title p-0 m-0">${data.title}</h5>
-                    <p class="card-text p-0 m-0">
-                        <i class="bi bi-geo-alt-fill text-danger"></i> ${data.location}
-                    </p>
-                </div>
-                <i class="bi bi-bookmark-fill text-primary fs-5 save-icon" data-id="${data.id}" style="cursor:pointer;"></i>
-            </div>
-            <div class="card-footer">
-                <small class="text-body-secondary">${data.type}</small>
-            </div>
-        </div>
-    </div>
-    `;
-}
 

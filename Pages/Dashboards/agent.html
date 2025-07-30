@@ -19,30 +19,10 @@
             <!-- LEFT PANEL -->
             <section class="position-fixed start-0 col-12 col-md-2 d-flex flex-column flex-shrink-0 vh-100 mt-0 rounded-end" style="background-color: #002147;">
                 <div class="nav flex-column nav-pills py-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <button class="nav-link text-light mb-3 text-start fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#profileMenu" aria-expanded="false" aria-controls="profileMenu">
-                    <img id="profilePreview" 
-                        src="/assets/profile picture.jpg" 
-                        alt="Profile" 
-                        class="img-fluid rounded-circle me-2"
-                        style="width: 40px; height: 40px; object-fit: cover;">My Profile
-                    </button>
-
-                    <input type="file" id="profileInput" accept="image/*" class="d-none">
-
-                    <div class="collapse ps-5" id="profileMenu">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                        <a class="nav-link text-light" style="font-size: 0.9rem;" href="/Pages/auth/userlogin.html">Sign Out</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link text-light" style="font-size: 0.9rem;" id="updatePhotoLink" href="#">Update photo</a>
-                        </li>
-                        <li class="nav-item">
-                        <a href="#" class="nav-link text-danger" data-bs-toggle="modal" data-bs-target="#deleteAccountModal" style="font-size: 0.9rem;">Delete Account</a>
-                        </li>
-                    </ul>
-                    </div>
-
+                    
+                    <a class="navbar-brand fw-bold text-light mb-4 ms-4" href="#">
+                        CAM-<span class="text-warning">GD </span>HOMES
+                    </a>
 
                     <button class="nav-link text-light mb-2 text-start active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="home" aria-selected="true">
                     <i class="bi bi-grid px-2 fs-4"></i> Dashboard
@@ -64,6 +44,40 @@
                     <a href="/index.html" class="nav-link text-light mb-2 text-start" type="button" aria-selected="false">
                     <i class="bi bi-eye px-2 fs-4"></i> View site
                     </a>
+
+                    <button class="nav-link text-light mt-5 text-start fw-semibold d-flex align-items-center justify-content-between" 
+                    type="button" data-bs-toggle="collapse" data-bs-target="#profileMenu" 
+                    aria-expanded="false" aria-controls="profileMenu">
+    
+                        <div class="d-flex align-items-center">
+                            <img id="profilePreview" 
+                                src="/assets/profile picture.jpg" 
+                                alt="Profile" 
+                                class="img-fluid rounded-circle me-2"
+                                style="width: 40px; height: 40px; object-fit: cover;">
+                            My Profile
+                        </div>
+
+                        <i class="bi bi-chevron-down ms-2 dropdown-icon"></i>
+                    </button>
+
+                    <input type="file" id="profileInput" accept="image/*" class="d-none">
+
+                    <div class="collapse ps-5" id="profileMenu">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" style="font-size: 0.9rem;" href="/Pages/auth/userlogin.html">Sign Out</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" style="font-size: 0.9rem;" id="updatePhotoLink" href="#">Update photo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-danger" data-bs-toggle="modal" data-bs-target="#deleteAccountModal" style="font-size: 0.9rem;">Delete Account</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
                 </div>
                 </section>
 
@@ -71,256 +85,298 @@
                 <section class="col-9 px-4 py-3" style="margin-left: 200px; background-color: #d7d7d7;">
                     <div class="tab-content" id="v-pills-tabContent" style="background-color: #d7d7d7;">
                         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                            <h1 class="homeheading ms-3 ms-md-auto">Welcome, Hart Anita</h1>
+                            <h1 class="homeheading ms-5 ms-md-3" style="font-size: 1.8rem;">Welcome, Hart Anita!</h1>
 
-                            <div class="row d-flex align-items-center ms-3 ms-md-auto mt-5 gap-2">
-                                <div class="col-12 col-md-3 d-flex gap-3 justify-content-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <!-- Top Stats Cards -->
+                                <div class="row justify-content-center mt-4 mx-1">
+                                <div class="col-12 col-md-4 mb-3">
+                                    <div class="d-flex align-items-center gap-3 shadow p-3 bg-body-tertiary rounded h-100">
                                     <i class="bi bi-house-check text-primary fs-1"></i>
-                                    <div class="col-6">
+                                    <div>
                                         <h3 class="mb-0">6</h3>
-                                        <p class="mt-0" >Properties</p>
-                                    </div>  
+                                        <p class="mb-0">Properties Sold</p>
+                                    </div>
+                                    </div>
                                 </div>
-                                <div class="col-12 col-md-4 d-flex gap-3 justify-content-center shadow p-3 mb-5 bg-body-tertiary rounded">
-                                    <i class="bi bi-wallet-fill text-primary fs-1"></i>
-                                    <div class="col-6">
+                                <div class="col-12 col-md-4 mb-3">
+                                    <div class="d-flex align-items-center gap-3 shadow p-3 bg-body-tertiary rounded h-100">
+                                    <i class="bi bi-eyeglasses text-primary fs-1"></i>
+                                    <div>
                                         <h3 class="mb-0">3</h3>
-                                        <p class="mt-0">Scheduled Tour</p>
-                                    </div>  
-                                </div>  
-                                <div class="col-12 col-md-4 d-flex gap-3 justify-content-center shadow p-3 mb-5 bg-body-tertiary rounded">
+                                        <p class="mb-0">Scheduled Tours</p>
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <div class="d-flex align-items-center gap-3 shadow p-3 bg-body-tertiary rounded h-100">
                                     <i class="bi bi-wallet-fill text-primary fs-1"></i>
-                                    <div class="col-6">
-                                        <h4 class="mb-0">N657,000</h4>
-                                        <p class="mt-0">Earned</p>
-                                    </div>  
-                                </div>  
+                                    <div>
+                                        <h4 class="mb-0">₦657,000</h4>
+                                        <p class="mb-0">Earned</p>
+                                    </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
+                             <div class="container-fluid mt-4">
                                 <div class="mb-3">
-                                    <h4 class="comptransaction">Recently Completed Transactions</h4>
+                                    <h4 class="comptransaction" style="font-size: 1.5rem;">Recently completed transactions</h4>
+                                    
                                 </div>
 
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                        <th>Property</th>
-                                        <th>Status</th>
-                                        <th>Type</th>
-                                        <th>Price</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="row">
-                                                <img src="/assets/house1.jpg" alt="house" class="img-fluid col-6" style="width: 6.25rem; height: 3.75rem;">
-                                                <div class="col-6">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                            <th>Property</th>
+                                            <th>Status</th>
+                                            <th>Type</th>
+                                            <th>Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="row">
+                                                    <img src="/assets/property.jpg" alt="house" class="img-fluid col-6" style="width: 6.25rem; height: 3.75rem;">
+                                                    <div class="col-6">
+                                                        <h6 class="mb-0">No.13 Rumuola Road</h6>
+                                                        <p class="mt-0" style="font-size: 0.8rem;">Port Hartcourt, Rivers State.</p>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-success px-3 py-2">Sold</span></td>
+                                                <td>Residential</td>
+                                                <td>₦45,000,000/year</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="row">
+                                                    <img src="/assets/property.jpg" alt="house" class="img-fluid col-6" style="width: 6.25rem; height: 3.75rem;">
+                                                    <div class="col-6">
                                                     <h6 class="mb-0">No.13 Rumuola Road</h6>
                                                     <p class="mt-0" style="font-size: 0.8rem;">Port Hartcourt, Rivers State.</p>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-success px-3 py-2">Sold</span></td>
-                                            <td>Residential</td>
-                                            <td>₦45,000,000/year</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="row">
-                                                <img src="/assets/house1.jpg" alt="house" class="img-fluid col-6" style="width: 6.25rem; height: 3.75rem;">
-                                                <div class="col-6">
-                                                <h6 class="mb-0">No.13 Rumuola Road</h6>
-                                                <p class="mt-0" style="font-size: 0.8rem;">Port Hartcourt, Rivers State.</p>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-success px-3 py-2">Sold</span></td>
-                                            <td>Commercial</td>
-                                            <td>₦3,000,000/year</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="row">
-                                                <img src="/assets/house1.jpg"
-                                                 alt="house" class="img-fluid col-6" style="width: 6.25rem; height: 3.75rem;">
-                                                <div class="col-6">
-                                                <h6 class="mb-0">No.13 Rumuola Road</h6>
-                                                <p class="mt-0" style="font-size: 0.8rem;">Port Hartcourt, Rivers State.</p>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-success px-3 py-2">Sold</span></td>
-                                            <td>Commercial</td>
-                                            <td>₦3,000,000/year</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-success px-3 py-2">Sold</span></td>
+                                                <td>Commercial</td>
+                                                <td>₦3,000,000/year</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="row">
+                                                    <img src="/assets/property.jpg"
+                                                    alt="house" class="img-fluid col-6" style="width: 6.25rem; height: 3.75rem;">
+                                                    <div class="col-6">
+                                                    <h6 class="mb-0">No.13 Rumuola Road</h6>
+                                                    <p class="mt-0" style="font-size: 0.8rem;">Port Hartcourt, Rivers State.</p>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-success px-3 py-2">Sold</span></td>
+                                                <td>Commercial</td>
+                                                <td>₦3,000,000/year</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
 
                         <!-- PROPERTIES TAB CONTENT -->
                         <div class="tab-pane fade" id="v-pills-properties" role="tabpanel" aria-labelledby="v-pills-properties-tab">
                             <div class="mb-5">
-                                <h2 class="comptransactionpage">Completed Transactions</h2>
+                                <h2 class="comptransactionpage">My Properties</h2>
+                                <p>View your completed sales history at a glance. </p>
                             </div>
 
                             <div class="row row-cols-1 row-cols-md-3 g-4">
-                                <div class="col">
-                                    <div class="card h-100 position-relative">
-                                      
-                                        <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
+                                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                                        <div class="card" data-id="house2" style="height: 320px; font-size: 0.875rem;">
+                                            
+                                            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
                                         SOLD
                                         </div>
 
-                                        <div class="position-relative">
-                                        <img src="/assets/house1.jpg" class="card-img-top" alt="house">
-                                        <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
-                                        </div>
+                                            <div class="position-relative">
+                                                <img src="/assets/property.jpg" class="card-img-top" alt="house" style="height: 250px; object-fit: cover;" id="">
 
-                                        <div class="card-body d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
-                                            <p class="card-text p-0 m-0">
-                                            <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
-                                            </p>
-                                        </div>
-                                        </div>
+                                                <!-- Buttons at bottom of image -->
+                                                <div class="position-absolute bottom-0 w-100 d-flex justify-content-between px-2 pb-2">
+                                                    <span class="btn btn-sm btn-light fw-semibold">#30M</span>
+                                                </div>
+                                            </div>
 
-                                        <div class="card-footer">
-                                        <small class="text-body-secondary">Commercial</small>
+                                            <div class="card-body d-flex justify-content-between align-items-start py-2 px-3">
+                                                <div>
+                                                    <h6 class="card-title mb-1">3 bedroom flat</h6>
+                                                    <p class="card-text mb-0">
+                                                        <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                    </p>
+                                                </div>
+                                                <i class="bi bi-bookmark fs-5 save-icon" style="cursor: pointer;" data-id="house2"></i>
+                                            </div>
+
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Commercial</small>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col">
-                                    <div class="card h-100 position-relative">
-                                      
-                                        <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
+                                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                                        <div class="card" data-id="house2" style="height: 320px; font-size: 0.875rem;">
+                                            
+                                            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
                                         SOLD
                                         </div>
 
-                                        <div class="position-relative">
-                                        <img src="/assets/house1.jpg" class="card-img-top" alt="house">
-                                        <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
-                                        </div>
+                                            <div class="position-relative">
+                                                <img src="/assets/property.jpg" class="card-img-top" alt="house" style="height: 250px; object-fit: cover;" id="">
 
-                                        <div class="card-body d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
-                                            <p class="card-text p-0 m-0">
-                                            <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
-                                            </p>
-                                        </div>
-                                        </div>
+                                                <!-- Buttons at bottom of image -->
+                                                <div class="position-absolute bottom-0 w-100 d-flex justify-content-between px-2 pb-2">
+                                                    <span class="btn btn-sm btn-light fw-semibold">#30M</span>
+                                                </div>
+                                            </div>
 
-                                        <div class="card-footer">
-                                        <small class="text-body-secondary">Commercial</small>
+                                            <div class="card-body d-flex justify-content-between align-items-start py-2 px-3">
+                                                <div>
+                                                    <h6 class="card-title mb-1">3 bedroom flat</h6>
+                                                    <p class="card-text mb-0">
+                                                        <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                    </p>
+                                                </div>
+                                                <i class="bi bi-bookmark fs-5 save-icon" style="cursor: pointer;" data-id="house2"></i>
+                                            </div>
+
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Commercial</small>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col">
-                                    <div class="card h-100 position-relative">
-                                      
-                                        <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
+                                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                                        <div class="card" data-id="house2" style="height: 320px; font-size: 0.875rem;">
+                                            
+                                            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
                                         SOLD
                                         </div>
 
-                                        <div class="position-relative">
-                                        <img src="/assets/house1.jpg" class="card-img-top" alt="house">
-                                        <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
-                                        </div>
+                                            <div class="position-relative">
+                                                <img src="/assets/property.jpg" class="card-img-top" alt="house" style="height: 250px; object-fit: cover;" id="">
 
-                                        <div class="card-body d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
-                                            <p class="card-text p-0 m-0">
-                                            <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
-                                            </p>
-                                        </div>
-                                        </div>
+                                                <!-- Buttons at bottom of image -->
+                                                <div class="position-absolute bottom-0 w-100 d-flex justify-content-between px-2 pb-2">
+                                                    <span class="btn btn-sm btn-light fw-semibold">#30M</span>
+                                                </div>
+                                            </div>
 
-                                        <div class="card-footer">
-                                        <small class="text-body-secondary">Commercial</small>
+                                            <div class="card-body d-flex justify-content-between align-items-start py-2 px-3">
+                                                <div>
+                                                    <h6 class="card-title mb-1">3 bedroom flat</h6>
+                                                    <p class="card-text mb-0">
+                                                        <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                    </p>
+                                                </div>
+                                                <i class="bi bi-bookmark fs-5 save-icon" style="cursor: pointer;" data-id="house2"></i>
+                                            </div>
+
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Commercial</small>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col">
-                                    <div class="card h-100 position-relative">
-                                      
-                                        <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
+                                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                                        <div class="card" data-id="house2" style="height: 320px; font-size: 0.875rem;">
+                                            
+                                            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
                                         SOLD
                                         </div>
 
-                                        <div class="position-relative">
-                                        <img src="/assets/house1.jpg" class="card-img-top" alt="house">
-                                        <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
-                                        </div>
+                                            <div class="position-relative">
+                                                <img src="/assets/property.jpg" class="card-img-top" alt="house" style="height: 250px; object-fit: cover;" id="">
 
-                                        <div class="card-body d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
-                                            <p class="card-text p-0 m-0">
-                                            <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
-                                            </p>
-                                        </div>
-                                        </div>
+                                                <!-- Buttons at bottom of image -->
+                                                <div class="position-absolute bottom-0 w-100 d-flex justify-content-between px-2 pb-2">
+                                                    <span class="btn btn-sm btn-light fw-semibold">#30M</span>
+                                                </div>
+                                            </div>
 
-                                        <div class="card-footer">
-                                        <small class="text-body-secondary">Commercial</small>
+                                            <div class="card-body d-flex justify-content-between align-items-start py-2 px-3">
+                                                <div>
+                                                    <h6 class="card-title mb-1">3 bedroom flat</h6>
+                                                    <p class="card-text mb-0">
+                                                        <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                    </p>
+                                                </div>
+                                                <i class="bi bi-bookmark fs-5 save-icon" style="cursor: pointer;" data-id="house2"></i>
+                                            </div>
+
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Commercial</small>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col">
-                                    <div class="card h-100 position-relative">
-                                      
-                                        <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
+                                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                                        <div class="card" data-id="house2" style="height: 320px; font-size: 0.875rem;">
+                                            
+                                            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
                                         SOLD
                                         </div>
 
-                                        <div class="position-relative">
-                                        <img src="/assets/house1.jpg" class="card-img-top" alt="house">
-                                        <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
-                                        </div>
+                                            <div class="position-relative">
+                                                <img src="/assets/property.jpg" class="card-img-top" alt="house" style="height: 250px; object-fit: cover;" id="">
 
-                                        <div class="card-body d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
-                                            <p class="card-text p-0 m-0">
-                                            <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
-                                            </p>
-                                        </div>
-                                        </div>
+                                                <!-- Buttons at bottom of image -->
+                                                <div class="position-absolute bottom-0 w-100 d-flex justify-content-between px-2 pb-2">
+                                                    <span class="btn btn-sm btn-light fw-semibold">#30M</span>
+                                                </div>
+                                            </div>
 
-                                        <div class="card-footer">
-                                        <small class="text-body-secondary">Commercial</small>
+                                            <div class="card-body d-flex justify-content-between align-items-start py-2 px-3">
+                                                <div>
+                                                    <h6 class="card-title mb-1">3 bedroom flat</h6>
+                                                    <p class="card-text mb-0">
+                                                        <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                    </p>
+                                                </div>
+                                                <i class="bi bi-bookmark fs-5 save-icon" style="cursor: pointer;" data-id="house2"></i>
+                                            </div>
+
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Commercial</small>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col">
-                                    <div class="card h-100 position-relative">
-                                      
-                                        <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
+                                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                                        <div class="card" data-id="house2" style="height: 320px; font-size: 0.875rem;">
+                                            
+                                            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 fw-bold" style="font-size: 0.75rem; z-index: 1;">
                                         SOLD
                                         </div>
 
-                                        <div class="position-relative">
-                                        <img src="/assets/house1.jpg" class="card-img-top" alt="house">
-                                        <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
-                                        </div>
+                                            <div class="position-relative">
+                                                <img src="/assets/property.jpg" class="card-img-top" alt="house" style="height: 250px; object-fit: cover;" id="">
 
-                                        <div class="card-body d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
-                                            <p class="card-text p-0 m-0">
-                                            <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
-                                            </p>
-                                        </div>
-                                        </div>
+                                                <!-- Buttons at bottom of image -->
+                                                <div class="position-absolute bottom-0 w-100 d-flex justify-content-between px-2 pb-2">
+                                                    <span class="btn btn-sm btn-light fw-semibold">#30M</span>
+                                                </div>
+                                            </div>
 
-                                        <div class="card-footer">
-                                        <small class="text-body-secondary">Commercial</small>
+                                            <div class="card-body d-flex justify-content-between align-items-start py-2 px-3">
+                                                <div>
+                                                    <h6 class="card-title mb-1">3 bedroom flat</h6>
+                                                    <p class="card-text mb-0">
+                                                        <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                    </p>
+                                                </div>
+                                                <i class="bi bi-bookmark fs-5 save-icon" style="cursor: pointer;" data-id="house2"></i>
+                                            </div>
+
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Commercial</small>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
 
@@ -330,110 +386,126 @@
                             <div>
                                 <div class="mb-5">
                                 <h3 style="font-size: 1.5rem;">My Scheduled Tour</h3>
+                                <p>View your scheduled tours for properties you're interested in.</p>
                                 </div>
 
                                 <!-- Start Row -->
                                 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
 
                                 <!---CARD-->
-                                    <div class="col">
-                                        <div class="card h-100" data-id="house1">
-                                        <div class="position-relative">
-                                            <img src="/assets/house1.jpg" class="card-img-top" alt="house">
-                                            <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
-                                            <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#propertyModal"
-                                            data-title="3 bedroom flat"
-                                            data-location="Lekki, Lagos Island"
-                                            data-price="30,000,000 Naira"
-                                            data-type="3 Bedroom Flat"
-                                            data-img="/assets/house1.jpg"
-                                            data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
-                                            Preview
-                                            </button>
-                                        </div>
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="card" data-id="house2" style="height: 320px; font-size: 0.875rem;">
+                                            <div class="position-relative">
+                                                <img src="/assets/property.jpg" class="card-img-top" alt="house" style="height: 250px; object-fit: cover;" id="">
 
-                                        <div class="card-body d-flex justify-content-between align-items-start">
-                                            <div>
-                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
-                                            <p class="card-text p-0 m-0">
-                                                <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
-                                            </p>
+                                                <!-- Buttons at bottom of image -->
+                                                <div class="position-absolute bottom-0 w-100 d-flex justify-content-between px-2 pb-2">
+                                                    <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
+                                                    <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#propertyModal"
+                                                    data-title="3 bedroom flat"
+                                                    data-location="Lekki, Lagos Island"
+                                                    data-price="30,000,000 Naira"
+                                                    data-type="3 Bedroom Flat"
+                                                    data-img="/assets/property.jpg"
+                                                    data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
+                                                    Preview
+                                                    </button>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="card-footer">
-                                        <small class="text-body-secondary">Commercial</small>
-                                        </div>
+                                            <div class="card-body d-flex justify-content-between align-items-start py-2 px-3">
+                                                <div>
+                                                    <h6 class="card-title mb-1">3 bedroom flat</h6>
+                                                    <p class="card-text mb-0">
+                                                        <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                    </p>
+                                                </div>
+                                                <i class="bi bi-bookmark fs-5 save-icon" style="cursor: pointer;" data-id="house2"></i>
+                                            </div>
+
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Commercial</small>
+                                            </div>
                                         </div>
                                     </div>
 
                                     <!---CARD-->
-                                    <div class="col">
-                                        <div class="card h-100" data-id="house2">
-                                        <div class="position-relative">
-                                            <img src="/assets/house1.jpg" class="card-img-top" alt="house">
-                                            <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
-                                            <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#propertyModal"
-                                            data-title="3 bedroom flat"
-                                            data-location="Lekki, Lagos Island"
-                                            data-price="30,000,000 Naira"
-                                            data-type="3 Bedroom Flat"
-                                            data-img="/assets/house1.jpg"
-                                            data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
-                                            Preview
-                                            </button>
-                                        </div>
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="card" data-id="house2" style="height: 320px; font-size: 0.875rem;">
+                                            <div class="position-relative">
+                                                <img src="/assets/property.jpg" class="card-img-top" alt="house" style="height: 250px; object-fit: cover;" id="">
 
-                                        <div class="card-body d-flex justify-content-between align-items-start">
-                                            <div>
-                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
-                                            <p class="card-text p-0 m-0">
-                                                <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
-                                            </p>
+                                                <!-- Buttons at bottom of image -->
+                                                <div class="position-absolute bottom-0 w-100 d-flex justify-content-between px-2 pb-2">
+                                                    <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
+                                                    <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#propertyModal"
+                                                    data-title="3 bedroom flat"
+                                                    data-location="Lekki, Lagos Island"
+                                                    data-price="30,000,000 Naira"
+                                                    data-type="3 Bedroom Flat"
+                                                    data-img="/assets/property.jpg"
+                                                    data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
+                                                    Preview
+                                                    </button>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="card-footer">
-                                        <small class="text-body-secondary">Commercial</small>
-                                        </div>
+                                            <div class="card-body d-flex justify-content-between align-items-start py-2 px-3">
+                                                <div>
+                                                    <h6 class="card-title mb-1">3 bedroom flat</h6>
+                                                    <p class="card-text mb-0">
+                                                        <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                    </p>
+                                                </div>
+                                                <i class="bi bi-bookmark fs-5 save-icon" style="cursor: pointer;" data-id="house2"></i>
+                                            </div>
+
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Commercial</small>
+                                            </div>
                                         </div>
                                     </div>
 
                                     <!---CARD-->
-                                    <div class="col">
-                                        <div class="card h-100" data-id="house3">
-                                        <div class="position-relative ">
-                                            <img src="/assets/house1.jpg" class="card-img-top" alt="house">
-                                            <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
-                                            <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#propertyModal"
-                                            data-title="3 bedroom flat"
-                                            data-location="Lekki, Lagos Island"
-                                            data-price="30,000,000 Naira"
-                                            data-type="3 Bedroom Flat"
-                                            data-img="/assets/house1.jpg"
-                                            data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
-                                            Preview
-                                            </button>
-                                        </div>
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="card" data-id="house2" style="height: 320px; font-size: 0.875rem;">
+                                            <div class="position-relative">
+                                                <img src="/assets/property.jpg" class="card-img-top" alt="house" style="height: 250px; object-fit: cover;" id="">
 
-                                        <div class="card-body d-flex justify-content-between align-items-start">
-                                            <div>
-                                            <h5 class="card-title p-0 m-0">3 bedroom flat</h5>
-                                            <p class="card-text p-0 m-0">
-                                                <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
-                                            </p>
+                                                <!-- Buttons at bottom of image -->
+                                                <div class="position-absolute bottom-0 w-100 d-flex justify-content-between px-2 pb-2">
+                                                    <span class="btn btn-sm btn-light position-absolute bottom-0 start-0 m-2 fw-semibold">#30M</span>
+                                                    <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#propertyModal"
+                                                    data-title="3 bedroom flat"
+                                                    data-location="Lekki, Lagos Island"
+                                                    data-price="30,000,000 Naira"
+                                                    data-type="3 Bedroom Flat"
+                                                    data-img="/assets/property.jpg"
+                                                    data-features="Spacious living room, ensuite bedrooms, fitted kitchen, 24/7 security, borehole water system.">
+                                                    Preview
+                                                    </button>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="card-footer">
-                                        <small class="text-body-secondary">Commercial</small>
-                                        </div>
+                                            <div class="card-body d-flex justify-content-between align-items-start py-2 px-3">
+                                                <div>
+                                                    <h6 class="card-title mb-1">3 bedroom flat</h6>
+                                                    <p class="card-text mb-0">
+                                                        <i class="bi bi-geo-alt-fill text-danger"></i> Lekki, Lagos Island
+                                                    </p>
+                                                </div>
+                                                <i class="bi bi-bookmark fs-5 save-icon" style="cursor: pointer;" data-id="house2"></i>
+                                            </div>
+
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">Commercial</small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -459,6 +531,8 @@
                             <p><strong>Type:</strong> <span id="modalType"></span></p>
                             <p><strong>Features:</strong> <span id="modalFeatures"></span></p>
                             <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+                            <p><strong>Preferred Date:</strong> <span id="modalViewDate"></span></p>
+                            <p><strong>Preferred Time:</strong> <span id="modalViewTime"></span></p>
                         </div>
                     </div>
                 </div>
@@ -479,6 +553,7 @@
     const price = button.getAttribute('data-price');
     const img = button.getAttribute('data-img');
 
+
     // Update modal content
     document.getElementById('propertyModalLabel').textContent = title;
     document.getElementById('modalLocation').textContent = location;
@@ -486,6 +561,7 @@
     document.getElementById('modalFeatures').textContent = features;
     document.getElementById('modalPrice').textContent = price;
     document.getElementById('modalImage').src = img;
+   
   });
 </script>
 
