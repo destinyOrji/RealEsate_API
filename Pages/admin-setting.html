@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Settings - CAM-GD Homes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+     body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f7f7;
+    }
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #002147;
+      position: fixed;
+      color: white;
+      padding-top: 1rem;
+    }
+    .sidebar .nav-link {
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .content {
+      margin-left: 250px;
+      padding: 2rem;
+    }
+    .profile-img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+
+    body.dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+
+  body.dark-mode .card {
+    background-color: #1e1e1e;
+    border-color: #333;
+    color: white;
+  }
+
+  body.dark-mode .form-control {
+    background-color: #2c2c2c;
+    border-color: #555;
+    color: white;
+  }
+
+  body.dark-mode .sidebar {
+    background-color: #1b1b1b;
+  }
+
+  body.dark-mode a.nav-link {
+    color: #ccc;
+  }
+
+  body.dark-mode a.nav-link.active {
+    background-color: #333;
+    color: #fff;
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+   <aside class="sidebar d-flex flex-column align-items-start p-3">
+    <h5 class="text-white mb-4 fs-6 fw-semibold">CAM-<span class="text-warning">GD</span> HOMES </h5> 
+    <a class="nav-link active" href="/Pages/Dashboards/admin-dashboard.html"><i class="bi bi-house"></i> Dashboard</a>
+    <a class="nav-link" href="/Pages/admin-properties.html"><i class="bi bi-building"></i> Properties</a>
+    <a class="nav-link" href="/Pages/admin-user.html"><i class="bi bi-people"></i> Users</a>
+     <a class="nav-link" href="/Pages/admin-agent-contact.html"><i class="bi bi-headset"></i> Agent Contact</a>
+    <a class="nav-link" href="/Pages/admin-contact.html"><i class="bi bi-chat-left-text"></i> Contact</a>
+    <a class="nav-link" href="/Pages/admin-payment.html"><i class="bi bi-cash-coin"></i> Payments</a>
+    <a class="nav-link" href="/Pages/admin-setting.html"><i class="bi bi-gear"></i> Settings</a>
+    <a class="nav-link mt-auto" href="/Pages/auth/admin-login.html"><i class="bi bi-box-arrow-right"></i> Log Out</a>
+  </aside>
+
+  <div class="content">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h4>Good morning, Mr. Moses.</h4>
+      <div class="d-flex align-items-center">
+        <input class="form-control me-2" type="search" placeholder="Search for listing, property etc." style="width: 300px;">
+        <i class="bi bi-bell fs-4 me-3"></i>
+        <div class="d-flex align-items-center">
+          <div class="me-2">Moses Gideonfia <span class="text-muted">Admin</span></div>
+         <img src="https://i.pravatar.cc/32" alt="profile" class="profile-img me-2"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings Sections -->
+    <div class="card mb-4">
+      <div class="card-header fw-semibold">Profile Settings</div>
+      <div class="card-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" value="Moses Gideonfia">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" value="moses@example.com">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Profile Picture</label>
+            <input type="file" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </div>
+    </div>
+
+    
+ 
+
+<script>
+  const darkModeSwitch = document.getElementById('darkModeSwitch');
+
+  // Load saved preference
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    darkModeSwitch.checked = true;
+  }
+
+ 
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
