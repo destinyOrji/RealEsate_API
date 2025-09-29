@@ -1,0 +1,19 @@
+{
+    "name": "camgd/homes-api",
+    "description": "CAM-GD Homes Real Estate API",
+    "type": "project",
+    "require": {
+        "php": "^7.4|^8.0",
+        "mongodb/mongodb": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "api/"
+        }
+    },
+    "config": {
+        "platform": {
+            "ext-mongodb": "2.0.0"
+        }
+    }
+}

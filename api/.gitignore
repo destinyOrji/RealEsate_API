@@ -1,0 +1,76 @@
+# Dependency directories
+/vendor/
+/node_modules/
+
+# Environment variables
+.env
+.phpunit.result.cache
+
+# Logs
+*.log
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Local development
+*.local
+
+# Uploads
+/uploads/*
+!/uploads/.gitkeep
+
+# Cache
+/cache/*
+!/cache/.gitkeep
+
+# Session files
+/sessions/*
+!/sessions/.gitkeep
+
+# Composer
+composer.lock
+composer.phar
+
+# PHPUnit
+/phpunit.xml
+/phpunit.xml.dist
+
+# Build files
+/build/
+
+# Local configuration overrides
+/config/*.local.php
+
+# Development tools
+.php-cs-fixer.cache
+.php-cs-fixer.dist.php
+.phpcs-cache
+.phpintel/
+.phpstorm.meta.php
+
+# Testing
+/coverage/
+/tests/_output/
+/tests/_support/_generated/
+
+# Local environment files
+.env.*.local
+.env.local
+.env.*.local.*
+!.env.example
+
+# Debug
+debug.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
